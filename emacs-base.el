@@ -25,15 +25,20 @@
 ;; Puggle Mode for turning on/off all puggle settings
 
 (define-minor-mode puggle-mode nil
-  :keymap puggle/keymap)
+  :keymap puggle/keymap
+  :after-hook (puggle/init))
 
 (define-global-minor-mode puggle-globalized-mode puggle-mode
   (lambda () (puggle-mode 1)))
+
+(defun puggle/init ()
+  (evil-mode 1))
 
 ;; ============================================
 ;; Dependencies
 
 (load "puggle/packages")
 (load "puggle/keybindings")
+(load "puggle/defaults")
 
 (provide 'emacs-base)

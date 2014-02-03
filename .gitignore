@@ -1,0 +1,15 @@
+/elpa
+/el-get
+/backups
+/swank
+/auto-save-list
+/url
+#.*#
+/places
+/.smex-items
+ac-comphist.dat
+/eshell
+/var/pcache
+/tramp
+/**/*.elc
+/.cask

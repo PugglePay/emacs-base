@@ -17,4 +17,10 @@
 
 ;;; Commentary:
 
-(define-key puggle/keymap (kbd "C-c C-l") (lambda () (message "hello world")))
+(define-key puggle/keymap (kbd "C-x C-p") 'ack-and-a-half)
+(define-key puggle/keymap (kbd "C-x g")   'magit-status)
+
+(define-key puggle/keymap (kbd "C-c C-<right>") 'windmove-right)
+(define-key puggle/keymap (kbd "C-c C-<up>")    'windmove-up)
+(define-key puggle/keymap (kbd "C-c C-<left>")  'windmove-left)
+(define-key puggle/keymap (kbd "C-c C-<down>")  'windmove-down)
