@@ -24,3 +24,36 @@
 (define-key puggle/keymap (kbd "C-c C-<up>")    'windmove-up)
 (define-key puggle/keymap (kbd "C-c C-<left>")  'windmove-left)
 (define-key puggle/keymap (kbd "C-c C-<down>")  'windmove-down)
+
+;; =================================================================================
+;; Pair programming special keybingings
+
+;; Extra keybindings for when working in tty
+(define-key (kbd "M-[ c")      (kbd "C-<right>"))
+(define-key (kbd "M-[ d")      (kbd "C-<left>"))
+(define-key (kbd "M-[ a")      (kbd "C-<up>"))
+(define-key (kbd "M-[ b")      (kbd "C-<down>"))
+(define-key (kbd "C-c M-[ c")  (kbd "C-c C-<right>"))
+(define-key (kbd "C-c M-[ d")  (kbd "C-c C-<left>"))
+(define-key (kbd "C-c M-[ a")  (kbd "C-c C-<up>"))
+(define-key (kbd "C-c M-[ b")  (kbd "C-c C-<down>"))
+(define-key (kbd "ESC <down>") (kbd "M-<down>"))
+(define-key (kbd "ESC <up>")   (kbd "M-<up>"))
+
+;; Add those escape sequences to iterm2.
+(define-key input-decode-map "\e[1;4A" [M-up])
+(define-key input-decode-map "\e[1;4B" [M-down])
+(define-key input-decode-map "\e[1;4C" [M-right])
+(define-key input-decode-map "\e[1;4D" [M-left])
+
+(define-key input-decode-map "\e[1;5A" [C-up])
+(define-key input-decode-map "\e[1;5B" [C-down])
+(define-key input-decode-map "\e[1;5C" [C-right])
+(define-key input-decode-map "\e[1;5D" [C-left])
+
+(define-key input-decode-map "\e[1;8A" [C-M-up])
+(define-key input-decode-map "\e[1;8B" [C-M-down])
+(define-key input-decode-map "\e[1;8C" [C-M-right])
+(define-key input-decode-map "\e[1;8D" [C-M-left])
+
+;; =================================================================================
