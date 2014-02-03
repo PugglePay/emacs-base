@@ -29,16 +29,16 @@
 ;; Pair programming special keybingings
 
 ;; Extra keybindings for when working in tty
-(define-key (kbd "M-[ c")      (kbd "C-<right>"))
-(define-key (kbd "M-[ d")      (kbd "C-<left>"))
-(define-key (kbd "M-[ a")      (kbd "C-<up>"))
-(define-key (kbd "M-[ b")      (kbd "C-<down>"))
-(define-key (kbd "C-c M-[ c")  (kbd "C-c C-<right>"))
-(define-key (kbd "C-c M-[ d")  (kbd "C-c C-<left>"))
-(define-key (kbd "C-c M-[ a")  (kbd "C-c C-<up>"))
-(define-key (kbd "C-c M-[ b")  (kbd "C-c C-<down>"))
-(define-key (kbd "ESC <down>") (kbd "M-<down>"))
-(define-key (kbd "ESC <up>")   (kbd "M-<up>"))
+(define-key puggle/keymap (kbd "M-[ c")      (kbd "C-<right>"))
+(define-key puggle/keymap (kbd "M-[ d")      (kbd "C-<left>"))
+(define-key puggle/keymap (kbd "M-[ a")      (kbd "C-<up>"))
+(define-key puggle/keymap (kbd "M-[ b")      (kbd "C-<down>"))
+(define-key puggle/keymap (kbd "C-c M-[ c")  (kbd "C-c C-<right>"))
+(define-key puggle/keymap (kbd "C-c M-[ d")  (kbd "C-c C-<left>"))
+(define-key puggle/keymap (kbd "C-c M-[ a")  (kbd "C-c C-<up>"))
+(define-key puggle/keymap (kbd "C-c M-[ b")  (kbd "C-c C-<down>"))
+(define-key puggle/keymap (kbd "ESC <down>") (kbd "M-<down>"))
+(define-key puggle/keymap (kbd "ESC <up>")   (kbd "M-<up>"))
 
 ;; Add those escape sequences to iterm2.
 (define-key input-decode-map "\e[1;4A" [M-up])
