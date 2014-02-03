@@ -36,4 +36,4 @@
 (load "puggle/packages")
 (load "puggle/keybindings")
 
-(provide 'puggle-emacs-base)
+(provide 'emacs-base)
