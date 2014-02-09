@@ -85,4 +85,15 @@
            :type github
            :pkgname "megakorre/pivotal"
            :depends (s dash maps)
-           :features pivotal)))
+           :features pivotal)
+
+    clojure-mode
+    cider
+
+    smex
+    (:name paredit
+           :description "Minor mode for editing parentheses"
+           :type http
+           :prepare (progn (autoload 'enable-paredit-mode "paredit")
+                           (autoload 'disable-paredit-mode "paredit"))
+           :url "http://mumble.net/~campbell/emacs/paredit.el")))

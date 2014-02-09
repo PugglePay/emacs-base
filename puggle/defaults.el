@@ -50,9 +50,6 @@
 (setq backup-directory-alist         `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
-;; this changes what emacs treats as a word
-(modify-syntax-entry ?_ "w")
-(modify-syntax-entry ?- "w")
 
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'meta)

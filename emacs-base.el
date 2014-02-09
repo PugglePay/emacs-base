@@ -32,7 +32,8 @@
   (lambda () (puggle-mode 1)))
 
 (defun puggle/init ()
-  (evil-mode 1))
+  (evil-mode 1)
+  (puggle/init-mode-initializer))
 
 ;; ============================================
 ;; Dependencies
@@ -40,5 +41,7 @@
 (load "puggle/packages")
 (load "puggle/keybindings")
 (load "puggle/defaults")
+(load "puggle/mode-initializer")
+(load "puggle/file-modes")
 
 (provide 'emacs-base)
