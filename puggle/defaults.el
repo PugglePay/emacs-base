@@ -20,6 +20,7 @@
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
 (setq inhibit-splash-screen t)
 ;; Fix encoding
 (setq default-process-coding-system '(utf-8 . utf-8))
@@ -50,8 +51,12 @@
 (setq backup-directory-alist         `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
+(custom-set-variables
+ '(evil-want-fine-undo t))
 
-(setq mac-option-modifier 'super)
-(setq mac-command-modifier 'meta)
+(setq
+ mac-option-modifier nil
+ mac-command-modifier 'meta
+ x-select-enable-clipboard t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)

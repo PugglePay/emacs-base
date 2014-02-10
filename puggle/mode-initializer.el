@@ -27,7 +27,12 @@
              emacs-lisp-mode
              inferior-emacs-lisp-mode
              minibuffer-inactive-mode
-             lisp-interaction-mode))))
+             lisp-interaction-mode))
+    (git  . (magit-log-mode
+             magit-branch-manager-mode
+             git-commit-mode
+             magit-process-mode
+             magit-status-mode))))
 
 ;; =========================================
 ;; (puggle/resolve-mode-category 'test) => 'test
@@ -40,6 +45,9 @@
        res))
    puggle/mode-categories
    :initial-value mode))
+
+(defun puggle/mode-hook ()
+  (intern (concat (symbol-name major-mode) "-hook")))
 
 (defun puggle/init-mode ()
   (unless (assoc major-mode puggle/modes-initialized)

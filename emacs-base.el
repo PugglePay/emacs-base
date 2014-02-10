@@ -33,7 +33,10 @@
 
 (defun puggle/init ()
   (evil-mode 1)
-  (puggle/init-mode-initializer))
+  (puggle/init-mode-initializer)
+  (require 'auto-complete-config)
+  (ac-config-default)
+  (global-auto-complete-mode))
 
 ;; ============================================
 ;; Dependencies

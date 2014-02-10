@@ -27,6 +27,7 @@
 (define-key puggle/keymap (kbd "C-c C-<down>")  'windmove-down)
 (define-key puggle/keymap (kbd "M-x") 'smex)
 (define-key puggle/keymap (kbd "M-+") 'er/expand-region)
+(define-key puggle/keymap (kbd "C-x f") 'fiplr-find-file)
 
 ;; =================================================================================
 ;; Pair programming special keybingings

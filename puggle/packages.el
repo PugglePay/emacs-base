@@ -40,6 +40,9 @@
     markdown-mode
     rspec-mode
     jekyll-el
+    rvm
+    fiplr
+    ac-nrepl
 
     (:name ack-and-a-half
            :type github

@@ -1,4 +1,4 @@
-;;; puggle/file-modes.el
+;;; puggle/init-git.el
 
 ;; Copyright (C) 2014 PugglePay
 
@@ -15,14 +15,6 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(add-to-list 'auto-mode-alist '("\\.yml.sample$" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.erb$"  . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.builder$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Guardfile" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Vagrantfile" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\Rakefile" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.rake" . ruby-mode))
+;;=======================================
+;; keybingings
+(define-key (current-local-map) (kbd "C-x i") 'pivotal-make-ref)
