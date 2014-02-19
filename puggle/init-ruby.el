@@ -18,3 +18,5 @@
 
 (modify-syntax-entry ?_ "w")
 (modify-syntax-entry ?- "w")
+
+(add-hook (puggle/mode-hook) 'rspec-mode)
