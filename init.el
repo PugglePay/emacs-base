@@ -47,3 +47,35 @@
      (sync-packages))))
 
 (puggle-globalized-mode 1)
+;; (require 'patrik)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ac-ignore-case nil)
+ '(enh-ruby-deep-indent-paren nil)
+ '(evil-want-fine-undo t)
+ '(feature-cucumber-command "bundle exec cucumber CUCUMBER_OPTS=\"{options}\" FEATURE=\"{feature}\"")
+ '(magit-set-upstream-on-push t)
+ '(rspec-spec-command "rspec")
+ '(rspec-use-bundler-when-possible nil)
+ '(rspec-use-rake-when-possible nil)
+ '(rspec-use-rvm t)
+ '(rspec-use-spring-when-possible t)
+ '(ruby-deep-arglist nil)
+ '(ruby-deep-indent-paren nil)
+ '(ruby-extra-keywords (quote ("protected" "private")))
+ '(ruby-hanging-indent-level 2)
+ '(tool-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(enh-ruby-heredoc-delimiter-face ((t (:foreground "dark cyan"))))
+ '(enh-ruby-op-face ((t (:foreground "gray96"))))
+ '(enh-ruby-string-delimiter-face ((t (:foreground "gray100"))))
+ '(erm-syn-warnline ((t (:underline (:color "orange" :style wave))))))
+
+(require 'fsharp-mode)

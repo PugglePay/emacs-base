@@ -29,9 +29,11 @@
 ;; Bug fix
 (setq stack-trace-on-error t)
 (setq imenu-auto-rescan t)
-(ido-mode t)
 (setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode t)
 
+(column-number-mode 1)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
@@ -51,6 +53,8 @@
 (setq backup-directory-alist         `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
+(setq twittering-use-master-password t)
+
 (custom-set-variables
  '(evil-want-fine-undo t))
 
@@ -58,5 +62,24 @@
  mac-option-modifier nil
  mac-command-modifier 'meta
  x-select-enable-clipboard t)
+
+;; =================================================
+;; w3m settings
+(setq browse-url-browser-function 'w3m-browse-url)
+(autoload 'w3m-browse-url "w3m" "Ask a WWW browser to show a URL." t)
+;; optional keyboard short-cut
+(global-set-key "\C-xm" 'browse-url-at-point)
+(setq browse-url-browser-function 'w3m-browse-url)
+(setq w3m-use-cookies t)
+(setq g-html-handler 'w3m)
+(setq mm-text-html-renderer 'w3m)
+(setq browse-url-browser-function
+            'w3m-browse-url)
+     (setq browse-url-browser-function
+            'w3m-browse-url)
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
+(setq inferior-lisp-program "/usr/local/bin/sbcl")
+(setq slime-contribs '(slime-fancy))
 
 (defalias 'yes-or-no-p 'y-or-n-p)

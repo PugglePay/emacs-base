@@ -1,5 +1,3 @@
-
-
 (deftheme pk "Created 2013-06-01.")
 
 (custom-theme-set-variables 'pk)

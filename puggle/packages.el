@@ -29,9 +29,9 @@
     evil-surround
 
     (:name enh-ruby-mode
-           :type github
-           :pkgname "zenspider/enhanced-ruby-mode"
-           :features enh-ruby-mode)
+     :type github
+     :pkgname "zenspider/enhanced-ruby-mode"
+     :features enh-ruby-mode)
 
     ruby-compilation
     scss-mode
@@ -43,6 +43,9 @@
     rvm
     fiplr
     ac-nrepl
+    emacs-w3m
+    find-file-in-project
+    ido-ubiquitous
 
     (:name ack-and-a-half
            :type github
@@ -58,7 +61,6 @@
            :before (defconst ruby-block-end-re "end"))
 
     magit
-
     (:name web-mode :type elpa)
 
     (:name dash
@@ -89,9 +91,6 @@
            :pkgname "megakorre/pivotal"
            :depends (s dash maps)
            :features pivotal)
-
-    clojure-mode
-    cider
 
     smex
     (:name paredit

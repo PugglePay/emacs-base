@@ -15,19 +15,20 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(paredit-mode 1)
 ;; this changes what emacs treats as a word
 (modify-syntax-entry ?_ "w")
 (modify-syntax-entry ?- "w")
 (modify-syntax-entry ?/ "w")
+(modify-syntax-entry ?: "w")
 
 ;;=======================================
 ;; hooks
 (add-hook (puggle/mode-hook) 'paredit-mode)
-
 ;;=======================================
+
 ;; keybingings
 (define-key (current-local-map) (kbd "C-c C-v") 'puggle/clone-parent-sexp)
+(define-key (current-local-map) (kbd "C-l") 'puggle/delete-sexp)
 
 ;;========================================
 ;; clojure auto-complete
@@ -63,3 +64,6 @@
     (yank)
     (call-interactively 'pop-to-mark-command)
     (move-to-column c)))
+
+(define-clojure-indent
+  (for-all 1))

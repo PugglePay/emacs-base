@@ -18,5 +18,23 @@
 
 (modify-syntax-entry ?_ "w")
 (modify-syntax-entry ?- "w")
+(modify-syntax-entry ?? "w")
+(modify-syntax-entry ?! "w")
 
 (add-hook (puggle/mode-hook) 'rspec-mode)
+(add-hook (puggle/mode-hook) 'puggle/toggle-line-wrap)
+(add-hook (puggle/mode-hook) 'auto-complete-mode)
+(add-hook (puggle/mode-hook) 'smartparens-mode)
+
+(require 'find-file-in-project)
+
+(defun puggle/toggle-line-wrap ()
+  (setq truncate-lines 1))
+
+(defvar puggle/zeus-buffers ())
+(defun puggle/exec-zeus ()
+  (interactive)
+  (let* ((project (ffip-project-root)))
+    (cd "~/src/puggle/mantis")
+    (pop-to-buffer (ansi-term "/bin/bash" "zeus boar-proj"))
+    (insert "hello world")))

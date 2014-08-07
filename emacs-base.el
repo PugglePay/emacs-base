@@ -36,7 +36,8 @@
   (puggle/init-mode-initializer)
   (require 'auto-complete-config)
   (ac-config-default)
-  (global-auto-complete-mode))
+  (global-auto-complete-mode)
+  (require 'w3m-load))
 
 ;; ============================================
 ;; Dependencies

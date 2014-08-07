@@ -16,7 +16,6 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-
 (define-key puggle/keymap (kbd "C-x C-p") 'ack-and-a-half)
 (define-key puggle/keymap (kbd "C-x g")   'magit-status)
 (define-key puggle/keymap (kbd "C-.")     'complete-symbol)
@@ -28,6 +27,11 @@
 (define-key puggle/keymap (kbd "M-x") 'smex)
 (define-key puggle/keymap (kbd "M-+") 'er/expand-region)
 (define-key puggle/keymap (kbd "C-x f") 'fiplr-find-file)
+
+(define-key puggle/keymap (kbd "C-M-m") 'gnus)
+(define-key puggle/keymap (kbd "C-M-m") 'gnus)
+
+(define-key puggle/keymap (kbd "C-c b") 'browse-url)
 
 ;; =================================================================================
 ;; Pair programming special keybingings

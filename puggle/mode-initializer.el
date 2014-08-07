@@ -28,6 +28,11 @@
              inferior-emacs-lisp-mode
              minibuffer-inactive-mode
              lisp-interaction-mode))
+    (mail . (gnus-article-mode
+             gnus-summary-mode
+             gnus-group-mode
+             message-mode))
+    (shell . (shell-mode))
     (git  . (magit-log-mode
              magit-branch-manager-mode
              git-commit-mode
